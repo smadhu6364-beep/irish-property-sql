@@ -1,0 +1,6 @@
+step,rule,rows_removed,rows_left
+0,Rows in the raw file,,813106
+1,"Date or price could not be parsed, or price not above zero",0,813106
+2,Exact duplicate rows,1088,812018
+3,"Marked ""not full market price"" (kept in sales, left out of price analysis)",41190,770828
+4,"Price under €10,000 or over €10m (kept in sales, left out of price analysis)",1284,769544

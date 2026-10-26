@@ -1,0 +1,16 @@
+check_no,check_name,value,note
+1,Rows in clean sales table,812018.0,all valid sales after cleaning
+2,Missing address,0.0,
+3,Missing county,0.0,
+4,"Missing Eircode, all years (%)",68.6,Eircodes only appear on the register in volume from 2021
+5,"Missing Eircode, sales from 2022 on (%)",24.2,
+6,Property size band filled in (%),6.5,"size is rarely given, so price per square metre is not possible"
+7,Not full market price sales (%),5.1,left out of price analysis
+8,"Full market sales under €10,000",770.0,left out: likely errors or part shares
+9,Full market sales over €10m,514.0,left out: mostly bulk apartment deals
+10,Prices above Q3 + 3 x IQR (%),1.7,"kept: dear homes are real, which is why we report medians"
+11,Address + date pairs with more than one price,793.0,"often one deal split across units, or a later correction"
+12,"Address says ""Co. X"" but county column differs",287.0,address text and county field disagree
+13,New dwellings recorded VAT inclusive (%),1.6,"VAT already included, so we do not add it again"
+14,Second-hand dwellings flagged VAT exclusive,0.0,should be zero: second-hand homes carry no VAT
+15,Sales dated in the future,0.0,should be zero
