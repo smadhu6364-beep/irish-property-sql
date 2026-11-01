@@ -121,6 +121,10 @@ Fifteen checks stacked with `UNION ALL` into one report. Highlights:
 - 793 address and date pairs appear with more than one price, and 287 addresses name a different county ("Co. X") from the county column.
 - 1.6% of new homes are recorded VAT inclusive, and no second-hand homes are flagged VAT exclusive, which is what we would expect.
 
+### 09_county_year.sql
+
+Every county in every year: sales, median price, the change on the year before (`LAG` partitioned by county) and that year's price rank (`RANK` partitioned by year). 26 counties × 17 years = 442 rows. This table drives the interactive dashboard at https://smadhu6364-beep.github.io/dashboard/.
+
 ### SQL ideas used, in plain language
 
 - **CTE (`WITH name AS (...)`)**: a named, temporary result. It lets you build a query in readable steps instead of nesting subqueries inside each other.
